@@ -1,0 +1,43 @@
+﻿{
+  "endpoint": "/tours_store/_search?filter_path=hits.hits._source.name,hits.hits._source.location_key",
+  "input_query": {
+    "size": 1000,
+    "sort": {
+      "updateddate": {
+        "order": "desc"
+      }
+    },
+    "query": {
+      "bool": {
+        "must": [
+          {
+            "match": {
+              "tourtype": "1"
+            }
+          },
+          {
+            "exists": {
+              "field": "location_key"
+            }
+          },
+          {
+            "match": {
+              "status": "0"
+            }
+          },
+          {
+            "match": {
+              "isdelete": "false"
+            }
+          },
+          {
+            "match": {
+              "isselfdesigned": "false"
+            }
+          }
+        ]
+      }
+    },
+    "fields": [ "location_key" ]
+  }
+}

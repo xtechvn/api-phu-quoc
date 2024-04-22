@@ -1,0 +1,37 @@
+{
+  "endpoint": "/hotel_store/_search?filter_path=hits.hits._source.name,hits.hits._source.city,hits.hits._source.state,hits.hits._source.hotelid,hits.hits._source.city,hits.hits._source.state,hits.hits._source.typeofroom,hits.hits._source.hoteltype,hits.hits._source.groupname,hits.hits._source.imagethumb,hits.hits._source.index_search",
+  "input_query": {
+    "query": {
+      "bool": {
+        "should": [
+          {
+            "match_phrase": {
+              "index_search": "{keyword}"
+            }
+          },
+          {
+            "match_phrase": {
+              "city": "{keyword}"
+            }
+          },
+          {
+            "match_phrase": {
+              "state": "{keyword}"
+            }
+          },
+          {
+            "match_phrase": {
+              "groupname": "{keyword}"
+            }
+          },
+          {
+            "match_phrase": {
+              "name": "{keyword}"
+            }
+          }
+        ]
+      }
+    },
+    "_source": [ "name", "street", "hotelid", "city", "state", "typeofroom", "hoteltype", "groupname", "imagethumb", "index_search" ]
+  }
+}
