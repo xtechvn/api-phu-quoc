@@ -1,9 +1,5 @@
 ﻿using Entities.ViewModels;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
-using System;
-using System.Linq;
 using System.Text;
 using Utilities;
 

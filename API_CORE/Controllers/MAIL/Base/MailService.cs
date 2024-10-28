@@ -1,23 +1,15 @@
 ﻿using Entities.ViewModels;
 using ENTITIES.Models;
 using ENTITIES.ViewModels.VinWonder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
+using iTextSharp.text;
 using Newtonsoft.Json;
-using PdfSharpCore;
 using Repositories.IRepositories;
 using REPOSITORIES.IRepositories;
 using REPOSITORIES.IRepositories.Clients;
 using REPOSITORIES.IRepositories.Fly;
 using REPOSITORIES.IRepositories.VinWonder;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Net.Mail;
-using System.Threading.Tasks;
 using TheArtOfDev.HtmlRenderer.PdfSharp;
 using Utilities;
 using Utilities.Contants;
@@ -684,7 +676,7 @@ namespace API_CORE.Controllers.MAIL.Base
                 using (var outputStream = new MemoryStream())
                 {
                     PdfGenerateConfig pdfGenerateConfig = new PdfGenerateConfig();
-                    pdfGenerateConfig.PageSize = PageSize.A4;
+                    pdfGenerateConfig.PageSize = PdfSharp.PageSize.A4;
                     var pdf = PdfGenerator.GeneratePdf(html, pdfGenerateConfig, null, null);
                     pdf.Save(outputStream);
                     var result = outputStream.ToArray();
