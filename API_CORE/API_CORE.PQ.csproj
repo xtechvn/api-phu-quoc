@@ -10,8 +10,9 @@
   <ItemGroup>
     <PackageReference Include="HtmlRenderer.PdfSharp" Version="1.5.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.35" />
+    <PackageReference Include="PDFsharp" Version="1.50.5147" />
     <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
-    <PackageReference Include="RestSharp" Version="108.0.3" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
