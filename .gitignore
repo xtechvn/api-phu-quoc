@@ -3,3 +3,15 @@
 ################################################################################
 
 /.vs
+/API_CORE/bin
+/API_CORE/obj
+/DAL/bin
+/DAL/obj
+/ENTITIES/obj
+/REDIS/bin
+/REDIS/obj
+/REPOSITORIES/bin
+/ENTITIES/bin
+/REPOSITORIES/obj
+/Utilities/bin
+/Utilities/obj
